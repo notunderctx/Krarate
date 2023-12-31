@@ -1,0 +1,32 @@
+{
+  "name": "lemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "node build.js"
+  },
+  "keywords": [],
+  "author": "MericcaN41",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^1.1.0",
+    "@discordjs/voice": "^0.16.1",
+    "@types/node": "^18.7.14",
+    "bad-words-next": "^2.2.1",
+    "canvacord": "^5.4.10",
+    "chalk": "^4.1.2",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.0.2",
+    "lucide-vue-next": "^0.303.0",
+    "mongoose": "^6.5.4",
+    "node-nlp": "^4.27.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.2"
+  },
+  "overrides": {
+    "discord-api-types": "0.37.20"
+  }
+}

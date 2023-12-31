@@ -1,0 +1,595 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "see,you": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "care,take": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "farewel": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "good,see,to,you": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "hello": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "up,what,yo": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "hey": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "is,up,what": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "me,name,tell,your": {
+            "intent": "greetings.name",
+            "domain": "default"
+          },
+          "introduc,yourself": {
+            "intent": "greetings.name",
+            "domain": "default"
+          },
+          "is,name,what,your": {
+            "intent": "greetings.name",
+            "domain": "default"
+          },
+          "are,who,you": {
+            "intent": "greetings.name",
+            "domain": "default"
+          },
+          "***********": {
+            "intent": "insult",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greetings.bye": "default",
+          "greetings.hello": "default",
+          "greetings.name": "default",
+          "insult": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "see you",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "take care",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "farewell",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "good to see you",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "yo whats up",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "hey",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "what's up",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "tell me your name",
+            "intent": "greetings.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "introduce yourself",
+            "intent": "greetings.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your name ",
+            "intent": "greetings.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "who are you",
+            "intent": "greetings.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "***********",
+            "intent": "insult"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "see": 1,
+              "you": 1,
+              "take": 1,
+              "care": 1,
+              "farewel": 1,
+              "good": 1,
+              "to": 1,
+              "hi": 1,
+              "hello": 1,
+              "yo": 1,
+              "what": 1,
+              "up": 1,
+              "hey": 1,
+              "is": 1,
+              "tell": 1,
+              "me": 1,
+              "your": 1,
+              "name": 1,
+              "introduc": 1,
+              "yourself": 1,
+              "who": 1,
+              "are": 1,
+              "***********": 1
+            },
+            "intents": {
+              "greetings.bye": 1,
+              "greetings.hello": 1,
+              "greetings.name": 1,
+              "insult": 1
+            },
+            "intentFeatures": {
+              "greetings.bye": {
+                "see": 1,
+                "you": 1,
+                "take": 1,
+                "care": 1,
+                "farewel": 1
+              },
+              "greetings.hello": {
+                "good": 1,
+                "to": 1,
+                "see": 1,
+                "you": 1,
+                "hi": 1,
+                "hello": 1,
+                "yo": 1,
+                "what": 1,
+                "up": 1,
+                "hey": 1,
+                "is": 1
+              },
+              "greetings.name": {
+                "tell": 1,
+                "me": 1,
+                "your": 1,
+                "name": 1,
+                "introduc": 1,
+                "yourself": 1,
+                "what": 1,
+                "is": 1,
+                "who": 1,
+                "are": 1,
+                "you": 1
+              },
+              "insult": {
+                "***********": 1
+              }
+            },
+            "featuresToIntent": {
+              "see": [
+                "greetings.bye",
+                "greetings.hello"
+              ],
+              "you": [
+                "greetings.bye",
+                "greetings.hello",
+                "greetings.name"
+              ],
+              "take": [
+                "greetings.bye"
+              ],
+              "care": [
+                "greetings.bye"
+              ],
+              "farewel": [
+                "greetings.bye"
+              ],
+              "good": [
+                "greetings.hello"
+              ],
+              "to": [
+                "greetings.hello"
+              ],
+              "hi": [
+                "greetings.hello"
+              ],
+              "hello": [
+                "greetings.hello"
+              ],
+              "yo": [
+                "greetings.hello"
+              ],
+              "what": [
+                "greetings.hello",
+                "greetings.name"
+              ],
+              "up": [
+                "greetings.hello"
+              ],
+              "hey": [
+                "greetings.hello"
+              ],
+              "is": [
+                "greetings.hello",
+                "greetings.name"
+              ],
+              "tell": [
+                "greetings.name"
+              ],
+              "me": [
+                "greetings.name"
+              ],
+              "your": [
+                "greetings.name"
+              ],
+              "name": [
+                "greetings.name"
+              ],
+              "introduc": [
+                "greetings.name"
+              ],
+              "yourself": [
+                "greetings.name"
+              ],
+              "who": [
+                "greetings.name"
+              ],
+              "are": [
+                "greetings.name"
+              ],
+              "***********": [
+                "insult"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "see",
+                "you",
+                "take",
+                "care",
+                "farewel",
+                "good",
+                "to",
+                "hi",
+                "hello",
+                "yo",
+                "what",
+                "up",
+                "hey",
+                "is",
+                "tell",
+                "me",
+                "your",
+                "name",
+                "introduc",
+                "yourself",
+                "who",
+                "are",
+                "***********"
+              ],
+              "intents": [
+                "greetings.bye",
+                "greetings.hello",
+                "greetings.name",
+                "insult"
+              ],
+              "perceptrons": [
+                [
+                  7.115407466888428,
+                  3.7919082641601562,
+                  5.6754913330078125,
+                  5.6754913330078125,
+                  11.229137420654297,
+                  -6.822788715362549,
+                  -6.822788715362549,
+                  -2.891573190689087,
+                  -2.8836612701416016,
+                  -0.6273589730262756,
+                  -1.2345746755599976,
+                  -1.0803905725479126,
+                  -2.874802350997925,
+                  -0.6069011092185974,
+                  -0.6536058783531189,
+                  -0.6536058783531189,
+                  -0.8077901005744934,
+                  -0.8077901005744934,
+                  -1.459265947341919,
+                  -1.459265947341919,
+                  -3.3193421363830566,
+                  -3.3193421363830566,
+                  -2.8508541584014893,
+                  2.917119723073766
+                ],
+                [
+                  -1.4560154676437378,
+                  -3.3924405574798584,
+                  -2.549906015396118,
+                  -2.549906015396118,
+                  -5.003557205200195,
+                  6.95241641998291,
+                  6.95241641998291,
+                  9.113953590393066,
+                  9.095560073852539,
+                  1.2302738428115845,
+                  2.286142587661743,
+                  5.732382297515869,
+                  9.082076072692871,
+                  1.0615525245666504,
+                  -0.640744149684906,
+                  -0.640744149684906,
+                  -4.216192722320557,
+                  -4.216192722320557,
+                  -2.5868008136749268,
+                  -2.5868008136749268,
+                  -1.8856474161148071,
+                  -1.8856474161148071,
+                  -5.0615553855896,
+                  5.1115752844473
+                ],
+                [
+                  -3.3807005882263184,
+                  2.0712437629699707,
+                  -0.8831397294998169,
+                  -0.8831397294998169,
+                  -1.3845393657684326,
+                  -0.7772834300994873,
+                  -0.7772834300994873,
+                  -1.3649605512619019,
+                  -1.3530644178390503,
+                  -0.6592202186584473,
+                  0.7303958535194397,
+                  -3.486057758331299,
+                  -1.3399583101272583,
+                  1.4878190755844116,
+                  1.1429301500320435,
+                  1.1429301500320435,
+                  5.360251426696777,
+                  5.360251426696777,
+                  6.4881720542907715,
+                  6.4881720542907715,
+                  5.451989650726318,
+                  5.451989650726318,
+                  -1.452942132949829,
+                  1.3078563381838946
+                ],
+                [
+                  -0.6366937756538391,
+                  -0.9374755620956421,
+                  -0.7758020162582397,
+                  -0.7758020162582397,
+                  -1.5194300413131714,
+                  -0.14052549004554749,
+                  -0.14052549004554749,
+                  -1.5138394832611084,
+                  -1.5081011056900024,
+                  -0.3277713656425476,
+                  -0.6419159770011902,
+                  -0.5825819969177246,
+                  -1.5017108917236328,
+                  -0.31396299600601196,
+                  -0.35505786538124084,
+                  -0.35505786538124084,
+                  -0.41439172625541687,
+                  -0.41439172625541687,
+                  -0.7681818604469299,
+                  -0.7681818604469299,
+                  -0.3002934455871582,
+                  -0.3002934455871582,
+                  12.612725257873535,
+                  1.545229385056709
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "see you"
+      ],
+      [
+        "en",
+        "take care"
+      ],
+      [
+        "en",
+        "farewell"
+      ],
+      [
+        "en",
+        "good to see you"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "yo whats up"
+      ],
+      [
+        "en",
+        "hey"
+      ],
+      [
+        "en",
+        "what's up"
+      ],
+      [
+        "en",
+        "tell me your name"
+      ],
+      [
+        "en",
+        "introduce yourself"
+      ],
+      [
+        "en",
+        "what is your name "
+      ],
+      [
+        "en",
+        "who are you"
+      ],
+      [
+        "en",
+        "***********"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "insult": [
+          {
+            "answer": "I'm sorry, but I won't engage in or promote the use of offensive language."
+          }
+        ],
+        "greetings.name": [
+          {
+            "answer": "I'm Kaido, your virtual assistant"
+          }
+        ],
+        "greetings.bye": [
+          {
+            "answer": "Take care, see you next time!"
+          },
+          {
+            "answer": "Goodbye, have a great day!"
+          }
+        ],
+        "greetings.hello": [
+          {
+            "answer": " Hello! How can I assist you today?"
+          },
+          {
+            "answer": "Greetings! What can I do for you?"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

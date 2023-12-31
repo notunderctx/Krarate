@@ -1,0 +1,30 @@
+[
+  {
+    "newGuild": {
+      "name": "Test 1",
+      "owner": {},
+      "memebers": 6
+    }
+  },
+  {
+    "newGuild": {
+      "name": "Test 2",
+      "owner": {},
+      "memebers": 6
+    }
+  },
+  {
+    "newGuild": {
+      "name": "RiGang appeals",
+      "owner": {},
+      "memebers": 3
+    }
+  },
+  {
+    "newGuild": {
+      "name": "RiGang appeals",
+      "owner": "razzbwrrypi",
+      "memebers": 3
+    }
+  }
+]
